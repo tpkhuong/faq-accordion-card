@@ -2,7 +2,7 @@
 
 ## Challenge level novice(newbie)
 
-![Design preview for the FAQ Accordion Card coding challenge](https://github.com/tpkhuong/faq-accordion-card/images/desktop-preview.jpg)
+![Design preview for the FAQ Accordion Card coding challenge](./preview.jpg)
 
 ## Welcome! 👋
 
