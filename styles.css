@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --clr-text-dark-grayish-blue: hsl(237, 12%, 33%);
+  --clr-text-grayish-blue: hsl(240, 6%, 50%);
+
+  --clr-text-desaturated: hsl(238, 29%, 16%);
+  --clr-text-soft-red: hsl(14, 88%, 65%);
+
+  --clr-bg-primary: hsl(273, 75%, 66%);
+  --clr-bg-secondary: hsl(240, 73%, 65%);
+
+  --clr-dividers: white;
+
+  --fs-200: 0.75rem;
+
+  --fw-400: 400;
+  --fw-700: 700;
+
+  --desktop-breakpoint: 90em;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  font-family: "Kumbh Sans";
+  line-height: 1.5;
+  font-size: var(--fs-200);
+  margin: 0;
+}
+
+.columns {
+  display: flex;
+  flex-flow: column;
+}
+
+.columns > * {
+  flex-basis: 100%;
+}
+
+.columns > * + * {
+  margin: 1rem 0 0 0;
+}
+
+@media screen and (min-width: 68.75em) {
+  .columns {
+    flex-flow: row;
+  }
+  .columns > * + * {
+    margin: 0 0 0 2rem;
+  }
+}
+
+[class*="col-"] {
+  flex-basis: var(--flex-col, 100%);
+}
+
+.col-2 {
+  --flex-col: 25%;
+}
+
+@media screen and (min-width: 68.75rem) {
+  .col-2 {
+    --flex-col: 45%;
+  }
+}
+
+.col-3 {
+  --flex-col: 105%;
+}
+
+.col-4 {
+  --flex-col: 25%;
+}
+
+.container {
+  padding-inline: 24px;
+}
+
+@media screen and (min-width: 68.75rem) {
+  .bg-img::before {
+    content: url(images/illustration-box-desktop.svg);
+    position: absolute;
+    z-index: 1;
+    left: -5rem;
+    top: 12.1rem;
+  }
+  .container {
+    padding-inline: revert;
+    padding-inline-end: 132px;
+  }
+}
+
+.accordion-container {
+  min-height: 100vh;
+  padding-inline: 20px;
+  padding-block-start: 152px;
+  background: linear-gradient(var(--clr-bg-primary), var(--clr-bg-secondary));
+}
+
+.content-container {
+  height: 73vh;
+  border-radius: 2rem;
+  background-color: var(--clr-dividers);
+  box-shadow: 0 0 5rem 0 rgba(142, 13, 146, 0);
+}
+
+@media screen and (min-width: 68.75rem) {
+  .content-container {
+    height: revert;
+    max-width: 1000px;
+    margin-inline: auto;
+  }
+}
+
+/* background img */
+
+.content-container picture {
+  display: block;
+  position: absolute;
+  transform: translate(1.2rem, -7rem);
+}
+
+@media screen and (min-width: 68.75rem) {
+  .style-wrapper {
+    overflow: hidden;
+    height: 100%;
+  }
+  .content-container picture {
+    transform: translate(-62px, 80px);
+    position: revert;
+    width: 100%;
+  }
+}
+
+/* mobile layout */
+
+.bg-img {
+  background-image: url(images/bg-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center -1px;
+  position: relative;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media screen and (min-width: 68.75rem) {
+  .section-title {
+    text-align: left;
+  }
+}
+
+.question p {
+  font-size: 0.8rem;
+}
+
+/* checkbox, arrow for label */
+
+label[for^="check"] {
+  display: flex;
+  font-size: 0.8rem;
+  margin: 1.25rem 0;
+}
+
+label::after {
+  content: url(images/icon-arrow-down.svg);
+  margin-left: auto;
+  transform: rotate(180deg);
+  transition: transform 1s linear;
+}
+
+input {
+  position: absolute;
+  z-index: -1;
+}
+
+.questions {
+  margin-top: 0.7rem;
+}
+
+.questions > * + *,
+.question:first-child {
+  border-bottom: 1px solid gainsboro;
+}
+
+.question {
+  overflow: hidden;
+}
+
+.question-content {
+  transition: height 1s linear;
+  height: 0;
+}
+
+[id^="check"]:checked ~ .question-content {
+  height: 5vh;
+}
+
+[id^="check"]:checked ~ label {
+  font-weight: 600;
+}
+
+@media screen and (min-width: 68.75rem) {
+  [id^="check"]:checked ~ .question-content {
+    height: 5vh;
+  }
+  .questions {
+    height: 395px;
+  }
+  label[for^="check"] {
+    font-size: 1rem;
+  }
+}
+
+[id^="check"]:checked ~ label::after {
+  transform: rotate(360deg);
+}
+
+@media screen and (min-width: 68.75rem) {
+  .image {
+    position: relative;
+    transform: translateY(10rem);
+  }
+
+  .image::before {
+    content: url(images/illustration-box-desktop.svg);
+    position: absolute;
+    left: -5rem;
+  }
+
+  .bg-img {
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 61.5rem;
+    background-position: -612px -300px;
+    position: relative;
+  }
+  .faq-content {
+    --flex-col: 55%;
+    align-self: center;
+    margin-block: 16px;
+    margin-block-start: 50px;
+  }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html" />
+    <meta name="author" content="KhuongCorp" />
+    <meta name="description" content="Learning Nodejs" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="ourStyles.css" />
+    <title>FAQ Accordion Frontend Mentor</title>
+  </head>
+  <body>
+    <section role="region" class="accordion-container">
+      <article class="content-container columns">
+        <div class="bg-img col-2">
+          <div class="style-wrapper">
+            <picture>
+              <source
+                media="(min-width: 1440px)"
+                srcset="images/illustration-woman-online-desktop.svg"
+              />
+              <img
+                src="images/illustration-woman-online-mobile.svg"
+                alt="Illustration of lady with green hair wearing orange shirt and black pants. Lady is looking at a large computer screen with the at sign "
+              />
+            </picture>
+          </div>
+        </div>
+        <div class="faq-content col-3">
+          <div class="container">
+            <h2 class="section-title">faq</h2>
+            <div class="questions">
+              <div class="question">
+                <input type="radio" name="faq" id="check1" />
+                <label for="check1">How many team members can I invite?</label>
+                <div class="question-content">
+                  You can invite up to 2 additional users on the Free plan.
+                  There is no limit on team members for the Premium plan.
+                </div>
+              </div>
+              <div class="question">
+                <input type="radio" name="faq" id="check2" />
+                <label for="check2"
+                  >What is the maximum file upload size?</label
+                >
+                <div class="question-content">
+                  No more than 2GB. All files in your account must fit your
+                  allotted storage space.
+                </div>
+              </div>
+              <div class="question">
+                <input type="radio" name="faq" id="check3" />
+                <label for="check3">How do I reset my password?</label>
+                <div class="question-content">
+                  Click “Forgot password” from the login page or “Change
+                  password” from your profile page. A reset link will be emailed
+                  to you.
+                </div>
+              </div>
+              <div class="question">
+                <input type="radio" name="faq" id="check4" />
+                <label for="check4">Can I cancel my subscription?</label>
+                <div class="question-content">
+                  Yes! Send us a message and we’ll process your request no
+                  questions asked.
+                </div>
+              </div>
+              <div class="question">
+                <input type="radio" name="faq" id="check5" />
+                <label for="check5">Do you provide additional support?</label>
+                <div class="question-content">
+                  Chat and email support is available 24/7. Phone lines are open
+                  during normal business hours.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>
