@@ -8,7 +8,7 @@
 
 Thank you for your time checking out my solution for the FAQ Accordion Card from Frontend Mentor.
 
-link to the challenge on Frontend Mentor:
+Below is a link to the challenge on Frontend Mentor:
 
 https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam
 
