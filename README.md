@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/tpkhuong/faq-accordion-card)
-- Live Site URL: [Add live site URL here](https://tpkhuong.github.io/faq-accordion-card/)
+- [Solution URL](https://github.com/tpkhuong/faq-accordion-card)
+- [Live Site URL](https://tpkhuong.github.io/faq-accordion-card/)
 
 ## My process
 
